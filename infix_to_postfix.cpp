@@ -11,16 +11,13 @@ string post_inf(string exp){
     stack<string> s;
     for (int i=0; exp[i]!='\0'; i++) 
     { 
-        // Push operands 
+        
         if (isOperand(exp[i])) 
         { 
            string op(1, exp[i]); 
            s.push(op); 
         } 
   
-        // We assume that input is 
-        // a valid postfix and expect 
-        // an operator. 
         else
         { 
             string op1 = s.top(); 
@@ -32,9 +29,7 @@ string post_inf(string exp){
         } 
     } 
   
-    // There must be a single element 
-    // in stack now which is the required 
-    // infix. 
+  
     cout<< s.top(); 
 } 
 
